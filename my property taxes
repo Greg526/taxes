@@ -1,0 +1,15 @@
+import datetime
+today = datetime.date.today()
+print(f"Today's date is: {today}")
+taxes = 2348.65
+print(f"The annual tax is ${taxes:,.2f}")
+mtax = taxes / 12
+print(f"The monthly tax is ${mtax:,.2f}")
+taxes_due = datetime.date(2026, 7, 1)
+#print(f"The taxes due are {taxes_due}")
+#taxes_due = taxes_due.replace(year=today.year)
+print(f"The taxes due are {taxes_due}")
+time = taxes_due - today
+print(f"The time remaining is {time}")
+per_day = taxes / time.days
+print(f"The daily cost is {per_day:.2f}")
